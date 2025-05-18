@@ -1,6 +1,7 @@
 {
   "name": "a.mathusan-portfolio",
   "homepage": "https://mathu145.github.io/a.mathusan-portfolio/",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
