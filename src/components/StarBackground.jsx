@@ -1,10 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-// id, size, x, y, opacity, animationDuration
-// id, size, x, y, delay, animationDuration
-
-
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
@@ -101,13 +97,12 @@ export const StarBackground = () => {
             top: `${star.y}%`,
             opacity: star.opacity,
             animationDuration: `${star.animationDuration}s`,
-            backgroundColor: isDarkMode ? "#ffffff" : "#ff8000", // <-- angepasst
+            backgroundColor: isDarkMode ? "#ffffff" : "#ff8000",
             position: "absolute",
             borderRadius: "50%",
           }}
         />
       ))}
-
 
       {/* Meteors */}
       {meteors.map((meteor) => (
@@ -121,7 +116,7 @@ export const StarBackground = () => {
             top: `${meteor.y}%`,
             animationDelay: `${meteor.delay}s`,
             animationDuration: `${meteor.animationDuration}s`,
-            backgroundColor: meteor.color,
+            backgroundImage: `linear-gradient(to bottom, white, ${meteor.color})`,
             position: "absolute",
             borderRadius: "999px",
           }}

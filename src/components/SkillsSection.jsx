@@ -2,6 +2,11 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
+    // Language
+    { name: "German", level: 100, category: "language" },
+    { name: "Tamil", level: 100, category: "language" },
+    { name: "English", level: 75, category: "language" },
+
     // Frontend
     { name: "HTML/CSS", level: 95, category: "frontend" },
     { name: "JavaScript", level: 90, category: "frontend" },
@@ -35,7 +40,7 @@ const skills = [
     { name: "HERMES", level: 70, category: "tools" },
   ];
   
-  const categories = ["all", "frontend", "backend", "tools"];
+  const categories = ["all", "frontend", "backend", "tools", "language"];
   
 export const SkillsSection = () => {
     const [activeCategory, setActiveCategory] = useState("all");

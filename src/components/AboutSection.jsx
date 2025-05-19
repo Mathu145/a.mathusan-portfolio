@@ -65,7 +65,7 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Personal strength</h4>
                   <p className="text-muted-foreground">
-                  I am an open-minded person
+                  I am an open-minded person who enjoys learning from different perspectives and adapting to new situations. Known for being a reliable team player, staying calm under pressure, and approaching challenges with a positive mindset. Curiosity and a strong willingness to grow help me continuously improve both personally and professionally.
                   </p>
                 </div>
               </div>
