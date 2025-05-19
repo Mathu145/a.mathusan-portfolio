@@ -11,10 +11,10 @@ export const HeroSection = () => {
             <span className="text-primary">
               <TypeAnimation
                 sequence={[
-                  "Mathusan", // Text
-                  5000,       // Pause 1s nach dem Tippen
-                  "",         // Zurücksetzen
-                  500,        // kurze Pause
+                  "Mathusan",
+                  5000,   
+                  "",        
+                  500,       
                 ]}
                 wrapper="span"
                 speed={10}
