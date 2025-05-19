@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils"; 
+import swisscomLogo from "@/pics/logos/swisscom.jpg";
+import bfhLogo from "@/pics/logos/bfh.png";
+import ipsoLogo from "@/pics/logos/ipso.png";
+import gibbLogo from "@/pics/logos/gibb.png";
 
 const careereducations = [
     {
@@ -8,7 +12,7 @@ const careereducations = [
         title: "DevOps Engineer II - Swisscom Schweiz AG",
         description:
           "In my DevOps Engineer role, I performed various tasks and worked in endpoint security.",
-        image: "src/pics/logos/swisscom.jpg",
+        image: swisscomLogo,
         tags: ["Dec 2022 - Today", "Career"],
         type: "career",
     },
@@ -16,7 +20,7 @@ const careereducations = [
       id: 2,
       title: "BSc. Business IT",
       description: "Berner Fachhochschule",
-      image: "src/pics/logos/bfh.png",
+      image: bfhLogo,
       tags: ["Feb 2024 - Sep 2025", "Education"],
       type: "education",
     },
@@ -25,7 +29,7 @@ const careereducations = [
       title: "Dipl. Business IT",
       description:
         "Ipso! Höhere Fachschule",
-      image: "src/pics/logos/ipso.png",
+      image: ipsoLogo,
       tags: ["Nov 2020 - Nov 2023", "Education"],
       type: "education",
     },
@@ -34,7 +38,7 @@ const careereducations = [
         title: "DevOps Engineer I - Swisscom Schweiz AG",
         description:
           "In my DevOps Engineer role, I performed various tasks and worked as application manager.",
-        image: "src/pics/logos/swisscom.jpg",
+        image: swisscomLogo,
         tags: ["Oct 2021 - Dec 2022", "Career"],
         type: "career",
       },
@@ -43,7 +47,7 @@ const careereducations = [
         title: "ICT Starter - Swisscom Schweiz AG",
         description:
           "In my role as ICT Starter, I took on various tasks and worked in the Printing Services division.",
-        image: "src/pics/logos/swisscom.jpg",
+        image: swisscomLogo,
         tags: ["Aug 2020 - Sep 2021", "Career"],
         type: "career",
       },
@@ -52,7 +56,7 @@ const careereducations = [
         title: "Apprenticeship as a computer scientist EFZ",
         description:
           "I completed my apprenticeship as a computer scientist EFZ at Swisscom.",
-        image: "src/pics/logos/swisscom.jpg",
+        image: swisscomLogo,
         tags: ["Aug 2016 - Jul 2020", "Career"],
         type: "career",
       },
@@ -61,7 +65,7 @@ const careereducations = [
         title: "Computer scientist EFZ",
         description:
           "GIBB Bern",
-        image: "src/pics/logos/gibb.png",
+        image: gibbLogo,
         tags: ["Aug 2016 - Jul 2020", "Education"],
         type: "education",
       },
@@ -70,7 +74,7 @@ const careereducations = [
         title: "Apprenticeship as an IT technician EBA",
         description:
           "I completed my apprenticeship as a IT technician EBA at Swisscom.",
-        image: "src/pics/logos/swisscom.jpg",
+        image: swisscomLogo,
         tags: ["Aug 2014 - Jul 2016", "Career"],
         type: "career",
       },
@@ -79,7 +83,7 @@ const careereducations = [
         title: "IT technician EBA",
         description:
           "GIBB Bern",
-        image: "src/pics/logos/gibb.png",
+        image: gibbLogo,
         tags: ["Aug 2014 - Jul 2016", "Education"],
         type: "education",
       },
