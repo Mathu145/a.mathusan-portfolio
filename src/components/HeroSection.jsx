@@ -11,7 +11,7 @@ export const HeroSection = () => {
             <span className="text-primary">
               <TypeAnimation
                 sequence={[
-                  "Mathusan",
+                  "Mathusan Sharma",
                   5000,   
                   "",        
                   500,       
