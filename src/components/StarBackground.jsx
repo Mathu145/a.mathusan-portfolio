@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
+// id, size, x, y, opacity, animationDuration
+// id, size, x, y, delay, animationDuration
+
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
@@ -116,7 +119,7 @@ export const StarBackground = () => {
             top: `${meteor.y}%`,
             animationDelay: `${meteor.delay}s`,
             animationDuration: `${meteor.animationDuration}s`,
-            backgroundImage: `linear-gradient(to bottom, white, ${meteor.color})`,
+            background: `linear-gradient(90deg, ${meteor.color}, white)`,
             position: "absolute",
             borderRadius: "999px",
           }}
