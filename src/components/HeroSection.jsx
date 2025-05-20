@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
+import { QuoteWidget } from "@/components/QuoteWidget";
 
 export const HeroSection = () => {
   return (
@@ -29,6 +30,8 @@ export const HeroSection = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             I am a business informatics student at the Bern University of Applied Sciences and work at Swisscom as a DevOps Engineer.
           </p>
+
+          <QuoteWidget />
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#about" className="cosmic-button">
