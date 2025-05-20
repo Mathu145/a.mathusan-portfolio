@@ -50,7 +50,7 @@ export const HeroSection = () => {
             </a>
           </div>
           {quote && (
-            <div className="text-md italic text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-4">
+            <div className="text-md pt-20 italic text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-4">
               <TypeAnimation
                 key={key}
                 sequence={[
