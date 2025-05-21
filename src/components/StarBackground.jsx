@@ -66,8 +66,8 @@ export const StarBackground = () => {
     const numberOfMeteors = 8;
     const newMeteors = [];
 
-    const darkColors = ["#8e2188", "#4e2188", "#0e2188"];
-    const lightColors = ["#ffc100", "#ff7400", "#ff0000"];
+    const darkColors = ["#8e2188", "#4e2188", "#0e2188", "#5a189a", "#7b2cbf", "#3c096c", "#191970", "#2e1a47", "#6f00ff"];
+    const lightColors = ["#ffc100", "#ff7400", "#ff0000", "#ffbf00", "#ffa500", "#ff5733", "#ff6347", "#dc143c", "#ff4500", ];
     const colors = darkMode ? darkColors : lightColors;
 
     for (let i = 0; i < numberOfMeteors; i++) {
