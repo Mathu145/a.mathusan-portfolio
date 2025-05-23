@@ -8,7 +8,7 @@ export const AboutSection = () => {
   const [showHack, setShowHack] = useState(false);
 
   useEffect(() => {
-    if (clickCount === 3) {
+    if (clickCount === 1) {
       setShowHack(true);
       setClickCount(0);
 
