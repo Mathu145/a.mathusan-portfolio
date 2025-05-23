@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 // id, size, x, y, opacity, animationDuration
 // id, size, x, y, delay, animationDuration
@@ -16,27 +16,27 @@ export const StarBackground = () => {
     const handleResize = () => {
       generateStars();
     };
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     // Dark Mode observer
     const observer = new MutationObserver(() => {
-      const dark = document.documentElement.classList.contains("dark");
+      const dark = document.documentElement.classList.contains('dark');
       setIsDarkMode(dark);
-      generateMeteors(dark); // Meteoren neu erzeugen mit richtiger Farbe
+      generateMeteors(dark);
     });
 
     observer.observe(document.documentElement, {
       attributes: true,
-      attributeFilter: ["class"],
+      attributeFilter: ['class'],
     });
 
     // Initial check
-    const dark = document.documentElement.classList.contains("dark");
+    const dark = document.documentElement.classList.contains('dark');
     setIsDarkMode(dark);
     generateMeteors(dark);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
       observer.disconnect();
     };
   }, []);
@@ -66,8 +66,28 @@ export const StarBackground = () => {
     const numberOfMeteors = 8;
     const newMeteors = [];
 
-    const darkColors = ["#8e2188", "#4e2188", "#0e2188", "#5a189a", "#7b2cbf", "#3c096c", "#191970", "#2e1a47", "#6f00ff"];
-    const lightColors = ["#ffc100", "#ff7400", "#ff0000", "#ffbf00", "#ffa500", "#ff5733", "#ff6347", "#dc143c", "#ff4500", ];
+    const darkColors = [
+      '#8e2188',
+      '#4e2188',
+      '#0e2188',
+      '#5a189a',
+      '#7b2cbf',
+      '#3c096c',
+      '#191970',
+      '#2e1a47',
+      '#6f00ff',
+    ];
+    const lightColors = [
+      '#ffc100',
+      '#ff7400',
+      '#ff0000',
+      '#ffbf00',
+      '#ffa500',
+      '#ff5733',
+      '#ff6347',
+      '#dc143c',
+      '#ff4500',
+    ];
     const colors = darkMode ? darkColors : lightColors;
 
     for (let i = 0; i < numberOfMeteors; i++) {
@@ -100,9 +120,9 @@ export const StarBackground = () => {
             top: `${star.y}%`,
             opacity: star.opacity,
             animationDuration: `${star.animationDuration}s`,
-            backgroundColor: isDarkMode ? "#ffffff" : "#ff8000",
-            position: "absolute",
-            borderRadius: "50%",
+            backgroundColor: isDarkMode ? '#ffffff' : '#ff8000',
+            position: 'absolute',
+            borderRadius: '50%',
           }}
         />
       ))}
@@ -119,9 +139,7 @@ export const StarBackground = () => {
             top: `${meteor.y}%`,
             animationDelay: `${meteor.delay}s`,
             animationDuration: `${meteor.animationDuration}s`,
-            background: `linear-gradient(90deg, ${meteor.color}, white)`,
-            position: "absolute",
-            borderRadius: "999px",
+            '--meteor-color': meteor.color,
           }}
         />
       ))}
