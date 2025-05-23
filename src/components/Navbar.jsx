@@ -1,7 +1,8 @@
 import { cn } from '@/lib/utils';
-import { X, Menu } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { EasterEggModal } from '@/components/EasterEggModal';
+import { X } from 'lucide-react';
+import { Menu } from 'lucide-react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const navItems = [
   { name: 'Home', href: '#hero' },
@@ -14,8 +15,6 @@ const navItems = [
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [clickCount, setClickCount] = useState(0);
-  const [showEasterEgg, setShowEasterEgg] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,17 +24,6 @@ export const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleNameClick = () => {
-    setClickCount((prev) => {
-      const newCount = prev + 1;
-      if (newCount === 3) {
-        setShowEasterEgg(true);
-        return 0;
-      }
-      return newCount;
-    });
-  };
 
   return (
     <nav
@@ -47,15 +35,15 @@ export const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <button
-          onClick={handleNameClick}
-          className="text-xl font-bold text-primary flex items-center cursor-pointer"
+        <a
+          className="text-xl font-bold text-primary flex items-center"
+          href="#hero"
         >
           <span className="relative z-10">
             <span className="text-glow text-foreground"> Mathusan</span>{' '}
             Portfolio
           </span>
-        </button>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
@@ -103,12 +91,6 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-
-      {/* Easter Egg Modal */}
-      <EasterEggModal
-        isOpen={showEasterEgg}
-        onClose={() => setShowEasterEgg(false)}
-      />
     </nav>
   );
 };
