@@ -97,7 +97,7 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply bg-background text-foreground transition-colors duration-500 ease-in-out;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
@@ -156,6 +156,7 @@
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
   width: var(--meteor-width, 100px);
   height: var(--meteor-height, 2px);
+  transition: background-image 0.5s ease-in-out;
 }
 
 @utility responsive-avatar {

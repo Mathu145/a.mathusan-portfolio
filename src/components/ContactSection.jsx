@@ -1,13 +1,12 @@
-import { cn } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
-import { Mail } from "lucide-react";
-import { Linkedin } from "lucide-react";
-import { Send } from "lucide-react";
-import { Github } from "lucide-react";
-import { MapPin } from "lucide-react";
-import { Phone } from "lucide-react";
-import { useState } from "react";
-  
+import { cn } from '@/lib/utils';
+import { useToast } from '@/hooks/use-toast';
+import { Mail } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
+import { Send } from 'lucide-react';
+import { Github } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { useState } from 'react';
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -20,7 +19,7 @@ export const ContactSection = () => {
 
     setTimeout(() => {
       toast({
-        title: "Message sent!",
+        title: 'Message sent!',
         description: "Thank you for your message. I'll get back to you soon.",
       });
       e.target.reset();
@@ -35,13 +34,13 @@ export const ContactSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-        Here are the contact options to get in touch with me
+          Here are the contact options to get in touch with me
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold mb-6">
-              {" "}
+              {' '}
               Contact Information
             </h3>
 
@@ -82,97 +81,91 @@ export const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <span className="font-medium hover:text-primary transition-colors">Bern, Switzerland</span>
+                  <span className="font-medium hover:text-primary transition-colors">
+                    Bern, Switzerland
+                  </span>
                 </div>
               </div>
             </div>
 
-
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="https://www.linkedin.com/in/mathusansharma/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/mathusansharma/"
+                  target="_blank"
+                >
                   <Linkedin />
                 </a>
                 <a href="https://github.com/Mathu145" target="_blank">
                   <Github />
                 </a>
               </div>
-            </div>             
+            </div>
           </div>
 
-          <div
-            className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
-          >
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
+          <form className="space-y-6" onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium mb-2">
+                Your Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                className="w-full px-4 py-3 rounded-md border border-input bg-background 
+                 focus:outline-none focus:ring-2 focus:ring-primary 
+                 transition duration-200"
+                placeholder="Max Mustermann"
+              />
+            </div>
 
-            <form className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Max Mustermann"
-                />
-              </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium mb-2">
+                Your Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                className="w-full px-4 py-3 rounded-md border border-input bg-background 
+                 focus:outline-none focus:ring-2 focus:ring-primary 
+                 transition duration-200"
+                placeholder="max@gmail.com"
+              />
+            </div>
 
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="max@gmail.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
-                  placeholder="Hello, I'd like to talk about..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
-                )}
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium mb-2"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
-                <Send size={16} />
-              </button>
-            </form>
-          </div>
+                Your Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                className="w-full px-4 py-3 rounded-md border border-input bg-background 
+                 focus:outline-none focus:ring-2 focus:ring-primary 
+                 transition duration-200 resize-none"
+                placeholder="Hello, I'd like to talk about..."
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={cn(
+                'cosmic-button w-full flex items-center justify-center gap-2'
+              )}
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+              <Send size={16} />
+            </button>
+          </form>
         </div>
       </div>
     </section>
