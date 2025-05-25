@@ -20,7 +20,7 @@ export const ContactSection = () => {
     setTimeout(() => {
       toast({
         title: 'Message sent!',
-        description: "Thank you for your message. I'll get back to you soon.",
+        description: "Thank you for your message. I'll NOT get back to you.",
       });
       e.target.reset();
       setIsSubmitting(false);
